@@ -1,0 +1,120 @@
+/* 全体の設定 */
+body {
+    background-color: #0d0015; 
+    color: #00ff9d; 
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* メインの画面 */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid #00ff9d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ff9d; /* ぼんやり光らせる 参考:https://qiita.com/7note/items/8da8c20bd1a0053eb04e */
+}
+
+h1 {
+    font-size: 32px;
+    text-shadow: 2px 2px #ff00de;
+}
+
+/* 入力欄とボタン */
+input {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #00ff9d;
+    width: 60%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #222;
+    color: #00ff9d;
+    border: 1px solid #00ff9d;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #00ff9d;
+    color: #000;
+}
+
+/* "食べる"ボタンなどの目立たせたいボタン */
+.main-btn {
+    font-weight: bold;
+    border: 2px solid #ff00de;
+    color: #ff00de;
+    margin-top: 20px;
+}
+.main-btn:hover {
+    background-color: #ff00de;
+    color: #fff;
+}
+
+/* ログ（入れた具材の履歴） */
+#log-area {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* 結果表示エリア */
+#result-area {
+    font-size: 24px;
+    min-height: 100px;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* サプライズ画面 */
+.gift {
+    display: none; /* 最初は隠す */
+    position: fixed;/* ポップアップ表示 */
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);/* 背景を半透明に */
+    justify-content: center;
+    align-items: center;
+}
+
+.gift-content {
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    border: 5px solid #ff00de;
+    text-align: center;
+    max-width: 80%;
+}
+
+.secret-message {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d60000;
+    margin: 20px 0;
+}
+
+/* 以下、アニメーションの設定 参考:https://note.com/emi8_okachi/n/n195af493cd2b */
+@keyframes simmer {
+    0% { transform: translateY(0px) ; }
+    50% { transform: translateY(-5px) ; }
+    100% { transform: translateY(0px) ; }
+}
+
+.pot-animation {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff00de;
+    
+    animation: simmer 0.5s ease-in-out infinite;
+}

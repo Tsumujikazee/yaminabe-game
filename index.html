@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闇鍋ゲーム 〜召し上がれ〜</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🍲 闇鍋ゲーム 🍲</h1>
+        <p>何が入っているかは…食べてからのお楽しみ…</p>
+
+        <div id="kitchen-screen">
+            <p>鍋に入れる具材を入力してください。<br>（例：お肉、ケーキ、レポート…）</p>
+            
+            <input id="ingredient-input" placeholder="具材名を入力…">
+            <button onclick="addIngredient()">鍋に入れる 🖐️</button>
+            
+            <div id="log-area"></div>
+
+            <br><br>
+            <button class="main-btn" onclick="finishCooking()">具材投入完了！食べる！🍴</button>
+        </div>
+
+        <div id="eat-screen" style="display: none;">
+            <div class="pot-animation">
+                <p>ぐつぐつ……🍲</p>
+            </div>
+
+            <div id="result-area">
+                <p>さあ、取り出して食べてください…</p>
+            </div>
+
+            <button id="eat-btn" class="main-btn" onclick="eatIngredient()">具材を取り出す 🥢</button>
+            
+            <br><br>
+            <button id="reset-btn" onclick="location.reload()" style="display: none;">もう一度鍋をする 🔄</button>
+        </div>
+    </div>
+
+    <div id="gift-window" class="gift">
+        <div class="gift-content">
+            <h2>🎁 Surprise! 🎁</h2>
+            <p>鍋の底からシークレット具材「プレゼント箱」が出てきました！</p>
+            <p class="secret-message">
+                おめでとうございます！<br>
+                A5ランクの和牛が入っていました！<br>
+                美味しく食べてください🎉
+            </p>
+            <button onclick="closeSecretGift()">鍋に戻る ↩️</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
